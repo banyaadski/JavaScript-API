@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="main">
+        <div class="main_section">
+            <h2 class="main_section_h">Заголовок</h2>
+            <p class="main_section_p">Текст статьи</p>
+            <div class="main_section_btn">
+                <button class="main_section_btn_red">Редактировать</button>
+                <button class="main_section_btn_del">Удалить</button>
+            </div>
+        </div>
+        
+        <button class="main_btn">Добавить</button>
+    </div> -->
+
+    <!-- <script src="js3.js"></script> -->
+    <script>
+        const bodyEl = document.querySelector('body');
+        const divEl = document.createElement('div');
+        divEl.classList.add('main');
+        bodyEl.append(divEl)
+
+        newspaperArticle.forEach(element => {
+            const sectorEl = document.createElement('div');
+            sectorEl.classList.add('main_section');
+
+            const hEl = document.createElement('h2');
+            const pEl = document.createElement('p');
+            hEl.classList.add('main_section_h');
+            pEl.classList.add('main_section_p');
+            hEl.textContent = element.name;
+            pEl.textContent = element.text;
+            sectorEl.appendChild(hEl);
+            sectorEl.appendChild(pEl);
+
+
+            const btnDiv = document.createElement('div');
+            btnDiv.classList.add('main_section_btn')
+            const redBtnEl = document.createElement('button');
+            const delBtnEl = document.createElement('button');
+            redBtnEl.classList.add('main_section_btn_red');
+            delBtnEl.classList.add('main_section_btn_del');
+            redBtnEl.textContent = 'Редактировать';
+            delBtnEl.textContent = 'Удалить';
+            btnDiv.appendChild(redBtnEl);
+            btnDiv.appendChild(delBtnEl);
+            sectorEl.appendChild(btnDiv)
+
+
+            const btnEl = document.createElement('button');
+            btnEl.classList.add('main_btn')
+            btnEl.textContent = 'Добавить'
+            divEl.append(sectorEl)
+        });
+    </script>
+    <script src="json.js"></script>
+</body>
+
+</html>
