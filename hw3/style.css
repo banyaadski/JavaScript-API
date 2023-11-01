@@ -1,0 +1,9 @@
+@charset "UTF-8";
+.btnlike {
+  border: 3px solid rebeccapurple; /* Параметры рамки*/
+  color: black;
+  background: #fcfcfc; /* Цвет фона */
+  font-size: 14px; /* Размер текста */
+  padding: 5px 20px;
+  border-radius: 25%;
+}/*# sourceMappingURL=style.css.map */
